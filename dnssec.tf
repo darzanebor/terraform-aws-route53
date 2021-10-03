@@ -27,6 +27,7 @@ resource "aws_kms_key" "this" {
   customer_master_key_spec = "ECC_NIST_P256"
   key_usage                = "SIGN_VERIFY"
   deletion_window_in_days  = 7
+  enable_key_rotation      = false
 }
 
 resource "aws_route53_key_signing_key" "this" {
